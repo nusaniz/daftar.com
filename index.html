@@ -16,11 +16,8 @@
             width: 100%;
             justify-content: center;
             margin: 0 auto;
+            background-color: teal;
             font-family: "Work Sans", "Helvetica", "Arial", sans-serif;
-        }
-
-        .card {
-            margin: 0.4%;
         }
 
         @media (min-width: 380px) and (max-width: 440px) {
@@ -44,6 +41,7 @@
             width: 400px;
             /* height: 400px; */
             padding: 2.5%;
+            margin: 0.4%;
             box-sizing: border-box;
             border: 1px solid #E0E0E0;
             border-top-color: rgb(224, 224, 224);
@@ -69,6 +67,7 @@
             border-bottom-right-radius: 2px;
             border-bottom-left-radius: 2px;
             box-shadow: 0px 3px 1px #E0E0E0;
+            background-color: white;
         }
 
         .title {
@@ -232,7 +231,7 @@
             }
         </style>
         <div class="box-3 border">
-            <button onclick="detail()">Lihat detail</button>
+            <button id="detaill" onclick="detail()">Lihat detail</button>
         </div>
 
         <!-- end box - 3 -->
@@ -245,10 +244,26 @@
                 /* margin-top: ; */
                 /* border: 1px solid; */
             }
+
+            .box-4 ul {
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                /* padding: 1rem 0 1rem 0; */
+                box-shadow: 3px 3px 10px #00000028;
+                /* border: 1px solid; */
+            }
+
+            .box-4 ul > li {
+                color: #6e6e6e;
+            }
         </style>
         <div class="box-4" id="box-4">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, necessitatibus amet quidem adipisci
-                explicabo enim!</p>
+            <ul>
+                <li>Mulai Pendaftaran: 13 Agustus 2020</li>
+                <li>Akhir Pendaftaran 29 Agustus 2020</li>
+                <li>Periode: 2020/2021</li>
+                <li>Gelombang: UINSA</li>
+            </ul>
             <button onclick="close20()">close</button>
         </div>
         <!-- box - 4 -->
@@ -261,13 +276,18 @@
 
     <script>
         var box4 = document.getElementById("box-4");
+        var detaill = document.getElementById("detaill");
 
         function detail() {
             box4.style.display = "block";
+            detaill.style.display = "none"
         }
         function close20() {
             box4.style.display = "";
+            detaill.style.display = "block"
         }
+
+
     </script>
 </body>
 
