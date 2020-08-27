@@ -22,6 +22,19 @@
         .card {
             margin: 0.4%;
         }
+
+        @media (min-width: 380px) and (max-width: 440px) {
+            .card {
+                /* display: none; */
+                /* width: 100px; */
+                /* background-color: teal; */
+            }
+
+            body {
+                /* padding: 10%; */
+                /* background-color: red; */
+            }
+        }
     </style>
 </head>
 
@@ -219,24 +232,26 @@
             }
         </style>
         <div class="box-3 border">
-            <button>Lihat detail</button>
+            <button onclick="detail()">Lihat detail</button>
         </div>
 
         <!-- end box - 3 -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <!-- box - 4 -->
+        <style>
+            .box-4 {
+                width: 100%;
+                display: none;
+                /* margin-top: ; */
+                /* border: 1px solid; */
+            }
+        </style>
+        <div class="box-4" id="box-4">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, necessitatibus amet quidem adipisci
+                explicabo enim!</p>
+            <button onclick="close20()">close</button>
+        </div>
+        <!-- box - 4 -->
 
 
     </div>
@@ -244,7 +259,16 @@
 
 
 
+    <script>
+        var box4 = document.getElementById("box-4");
 
+        function detail() {
+            box4.style.display = "block";
+        }
+        function close20() {
+            box4.style.display = "";
+        }
+    </script>
 </body>
 
 </html>
